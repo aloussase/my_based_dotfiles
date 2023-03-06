@@ -1,9 +1,3 @@
-local opts = { noremap=true, silent=true }
-
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-
 local function setup_fidget()
   local has_fidget, fidget = pcall(require, "fidget")
   if has_fidget then
@@ -11,23 +5,54 @@ local function setup_fidget()
   end
 end
 
+local function setup_lsp_signature()
+  local has_lsp_signature, lsp_signature = pcall(require, "lsp_signature")
+  if has_lsp_signature then
+    lsp_signature.setup{
+      hint_prefix = '',
+      bind = true,
+      handle_opts = {
+        border = 'rounded'
+      }
+    }
+
+    local opts = { silent = true, noremap = true }
+    vim.keymap.set('n', '<C-k>', function() lsp_signature.toggle_float_win() end, opts)
+  end
+end
+
+local function setup_lsp_kind()
+  local has_lsp_kind, lsp_kind = pcall(require, 'lspkind')
+  if has_lsp_kind then
+    lsp_kind.init{}
+  end
+end
+
+local function setup_nvim_lightbulb() 
+  local has_lightbulb, lightbulb = pcall(require, 'nvim-lightbulb')
+  if has_lightbulb then
+    lightbulb.setup {
+      autocmd = {
+        enabled = true
+      }
+    }
+  end
+end
+
 local on_attach = function(client, bufnr)
+  -- Setup completion
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+  -- Setup keybindings
+  local keybindings = require('plugins.lspconfig.keybindings')
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  keybindings.KeybindingFactory:getKeybindings(bufopts):createKeybindings()
 
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-  vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
-  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
-
+  -- Setup extensions
   setup_fidget()
+  setup_lsp_signature()
+  setup_lsp_kind()
+  setup_nvim_lightbulb()
 end
 
 local lspconfig = require('lspconfig')

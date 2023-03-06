@@ -10,7 +10,13 @@ vim.o.number = true
 
 vim.o.wrap = false
 
+vim.o.laststatus = 0
+vim.o.cmdheight = 0
+
+vim.o.splitright = true
+vim.o.splitbelow = true
+
+vim.o.signcolumn = 'yes'
+
 vim.o.termguicolors = true
-vim.cmd[[colorscheme hyper]]
-
-
+vim.cmd('colorscheme hyper')
