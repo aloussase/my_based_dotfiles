@@ -23,6 +23,11 @@ require("paq") {
   --
   'nvim-tree/nvim-tree.lua',
 
+  -- Fuzzy finder
+  --
+  'nvim-telescope/telescope.nvim',
+  'luc-tielen/telescope_hoogle',
+
   -- Lsp
   --
   'neovim/nvim-lspconfig',
@@ -39,6 +44,11 @@ require("paq") {
   -- REPL
   --
   'hkupty/iron.nvim',
+
+  -- Haskell
+  --
+  'nbouscal/vim-stylish-haskell',
+  'Twinside/vim-hoogle',
   
   -- Misc
   --

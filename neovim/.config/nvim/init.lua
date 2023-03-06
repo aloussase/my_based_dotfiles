@@ -8,6 +8,7 @@ require('plugins.trouble')
 require('plugins.transparent')
 require('plugins.gitsigns')
 require('plugins.nvimtree')
+require('plugins.telescope')
 
 -- Load options
 -- 
