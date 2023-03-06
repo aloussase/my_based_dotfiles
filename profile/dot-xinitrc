@@ -2,6 +2,8 @@
 
 sxhkd &
 
+xsetroot -solid black
+
 volumeicon &
 
 nm-applet &
