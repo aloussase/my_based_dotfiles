@@ -7,6 +7,7 @@ require('plugins.iron')
 require('plugins.trouble')
 require('plugins.transparent')
 require('plugins.gitsigns')
+require('plugins.nvimtree')
 
 -- Load options
 -- 

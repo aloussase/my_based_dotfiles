@@ -19,6 +19,10 @@ require("paq") {
   'nvim-treesitter/nvim-treesitter',
   'mrjones2014/nvim-ts-rainbow',
 
+  -- File explorer
+  --
+  'nvim-tree/nvim-tree.lua',
+
   -- Lsp
   --
   'neovim/nvim-lspconfig',
