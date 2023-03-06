@@ -1,11 +1,11 @@
-super + enter
+super + Return
   kitty
 
 super + shift + f
   firefox
 
 XF86MonBrightness{Up,Down}
-  xbacklight {+,-}%5
+  xbacklight -{inc,dec} 5
 
 XF86AudioLowerVolume
   pactl set-sink-volume 0 -5%
