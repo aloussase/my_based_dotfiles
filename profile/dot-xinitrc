@@ -2,6 +2,8 @@
 
 sxhkd &
 
+nm-applet &
+
 kitty &
 
 while :; do
