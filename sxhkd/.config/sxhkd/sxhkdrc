@@ -1,0 +1,17 @@
+super + enter
+  kitty
+
+super + shift + f
+  firefox
+
+XF86MonBrightness{Up,Down}
+  xbacklight {+,-}%5
+
+XF86AudioLowerVolume
+  pactl set-sink-volume 0 -5%
+
+XF86AudioRaiseVolume 
+  pactl set-sink-volume 0 +5%
+
+XF86AudioMute
+  pactl set-sink-mute toggle
