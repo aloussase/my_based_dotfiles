@@ -1,10 +1,6 @@
 require("paq") {
   "savq/paq-nvim",
 
-  -- Syntax highlightning
-  --
-  'nvim-treesitter/nvim-treesitter',
-
   -- UI
   --
   'nvim-tree/nvim-web-devicons',
@@ -17,6 +13,11 @@ require("paq") {
   -- Git
   --
   'lewis6991/gitsigns.nvim',
+
+  -- Treesitter
+  --
+  'nvim-treesitter/nvim-treesitter',
+  'mrjones2014/nvim-ts-rainbow',
 
   -- Lsp
   --

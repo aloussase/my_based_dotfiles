@@ -5,5 +5,10 @@ require'nvim-treesitter.configs'.setup {
   ignore_install = {},
   highlight = {
     enable = true,
+
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
   },
 }
