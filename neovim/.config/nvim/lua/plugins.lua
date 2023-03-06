@@ -3,20 +3,26 @@ require("paq") {
 
   -- Syntax highlightning
   --
-  { 'nvim-treesitter/nvim-treesitter', run = function() vim.cmd 'TSUpdate' end },
+  'nvim-treesitter/nvim-treesitter',
 
   -- UI
   --
   'nvim-tree/nvim-web-devicons',
+  'xiyaowong/nvim-transparent',
 
   -- Colorscheme
   --
   'jdsimcoe/hyper.vim',
 
+  -- Git
+  --
+  'lewis6991/gitsigns.nvim',
+
   -- Lsp
   --
   'neovim/nvim-lspconfig',
   'ray-x/lsp_signature.nvim',
+  'folke/trouble.nvim',
 
   -- Lsp UI
   --
