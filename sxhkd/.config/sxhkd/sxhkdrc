@@ -4,6 +4,9 @@ super + Return
 super + shift + f
   firefox
 
+super + p
+  rofi -show drun
+
 XF86MonBrightness{Up,Down}
   xbacklight -{inc,dec} 5
 
