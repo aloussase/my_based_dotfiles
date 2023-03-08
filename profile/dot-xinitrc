@@ -17,6 +17,10 @@ nm-applet  &    # Wifi icon.
 ##
 kitty &
 
+##
+## Start compositor.
+picom &
+
 ## Setup the correct resolution.
 ## 
 xrandr --output eDP1 --mode 1368x768
