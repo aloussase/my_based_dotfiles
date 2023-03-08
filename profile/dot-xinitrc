@@ -1,14 +1,25 @@
 #!/bin/sh
 
+## Start a hotkeys daemon.
+##
 sxhkd &
 
+## Set the background to black.
+##
 xsetroot -solid black
 
-volumeicon &
+## Spawn some tray icons.
+##
+volumeicon &    # Volume icon.
+nm-applet &     # Wifi icon.
 
-nm-applet &
-
+## Spawn a terminal.
+##
 kitty &
+
+## Setup the correct resolution.
+## 
+xrandr --output eDP1 --mode 1368x768 --primary
 
 while :; do
   dwm >/dev/null 2>&1
