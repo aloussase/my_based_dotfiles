@@ -1,0 +1,51 @@
+configuration {
+  display-drun: "";
+  drun-display-format: "{icon} {name}";
+  modi: "window,drun";
+  font: "Hasklug NFM 15";
+  show-icons: true;
+}
+
+@theme "/dev/null"
+
+* {
+  background-color: black;
+  padding: 2px;
+}
+
+window {
+  text-color: white;
+}
+
+inputbar {
+  children: [prompt, textbox-prompt-colon, entry];
+}
+
+entry {
+  text-color: white;
+}
+
+prompt {
+  text-color: white;
+  enabled:    true;
+}
+
+textbox-prompt-colon {
+  expand:     false;
+  margin:     0px;
+  str:        "󰘧";
+  text-color: red;
+}
+
+element {
+  text-color: white;
+}
+
+element selected {
+  text-color: red;
+  background-color: #111;
+}
+
+listview {
+  lines: 10;
+}
