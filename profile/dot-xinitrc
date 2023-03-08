@@ -11,7 +11,7 @@ xsetroot -solid black
 ## Spawn some tray icons.
 ##
 volumeicon &    # Volume icon.
-nm-applet &     # Wifi icon.
+nm-applet  &    # Wifi icon.
 
 ## Spawn a terminal.
 ##
@@ -19,7 +19,7 @@ kitty &
 
 ## Setup the correct resolution.
 ## 
-xrandr --output eDP1 --mode 1368x768 --primary
+xrandr --output eDP1 --mode 1368x768
 
 while :; do
   dwm >/dev/null 2>&1
