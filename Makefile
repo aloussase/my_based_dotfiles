@@ -1,4 +1,4 @@
-PKGS := neovim profile sxhkd
+PKGS := neovim profile sxhkd rofi picom
 
 all: install
 
