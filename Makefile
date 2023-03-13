@@ -1,4 +1,4 @@
-PKGS := neovim profile sxhkd rofi picom
+PKGS := neovim profile sxhkd rofi picom kitty
 
 all: install
 

@@ -19,4 +19,4 @@ vim.o.splitbelow = true
 vim.o.signcolumn = 'yes'
 
 vim.o.termguicolors = true
-vim.cmd('colorscheme hyper')
+vim.cmd('colorscheme kanagawa')

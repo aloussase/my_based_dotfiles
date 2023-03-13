@@ -9,6 +9,7 @@ require("paq") {
   -- Colorscheme
   --
   'jdsimcoe/hyper.vim',
+  'rebelot/kanagawa.nvim',
 
   -- Git
   --
@@ -52,6 +53,7 @@ require("paq") {
   
   -- Misc
   --
-  'antoinemadec/FixCursorHold.nvim' -- Required by nvim-lightbulb
+  'antoinemadec/FixCursorHold.nvim', -- Required by nvim-lightbulb
 
+  'nvim-lua/plenary.nvim'
 }
